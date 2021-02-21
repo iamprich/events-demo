@@ -1,30 +1,31 @@
-# Getting Started with Create React App
+# Events Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple demo to display recent events.
 
-## Available Scripts
+Live demo is viewable [here](https://lucid-pasteur-b36083.netlify.app/)
 
-In the project directory, you can run:
+To run locally:
 
-### `yarn start`
+Clone the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+$ git clone https://github.com/iamprich/events-demo.git
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Navigate into the project folder
 
-### `yarn test`
+```
+$ cd events-demo
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install the dependencies
 
-### `yarn build`
+```
+$ yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the development server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ yarn start
+```
