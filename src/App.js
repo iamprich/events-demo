@@ -27,7 +27,7 @@ function App() {
   };
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="text-2xl text-center mt-4">Loading...</p>;
   } else {
     return (
       <section id="events">
