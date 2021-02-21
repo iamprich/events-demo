@@ -5,9 +5,9 @@ export const formatDate = (iso) => {
   return date.toLocaleDateString("en-US", dateOptions);
 };
 
-export const formatDuration = (start_iso, end_iso) => {
-  let startDate = new Date(start_iso);
-  let endDate = new Date(end_iso);
+export const formatDuration = (startISO, endISO) => {
+  let startDate = new Date(startISO);
+  let endDate = new Date(endISO);
   let timeOptions = { hour: "2-digit", minute: "2-digit" };
   let startTime = startDate.toLocaleTimeString("en-US", timeOptions);
   let endTime = endDate.toLocaleTimeString("en-US", timeOptions);
@@ -15,11 +15,13 @@ export const formatDuration = (start_iso, end_iso) => {
   return `${startTime} – ${endTime}`;
 };
 
-export const formatPrice = (price, currency) => {
+export const formatPrice = (priceInCents, currency) => {
   let formatter = Intl.NumberFormat("en-US", {
     style: "currency",
     currency: currency
   });
 
-  return formatter.format(price);
+  let priceInDollars = priceInCents / 100;
+
+  return formatter.format(priceInDollars);
 };

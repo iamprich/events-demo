@@ -35,7 +35,7 @@ function EventItem({ event }) {
           )}
 
           <div className="mb-4">
-            <p>{formatPrice(event.price, event.currency)}</p>
+            <p>{formatPrice(event.price_integer, event.currency)}</p>
           </div>
 
           <div className="mt-auto flex items-baseline">

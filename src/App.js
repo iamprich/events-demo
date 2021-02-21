@@ -4,6 +4,7 @@ import EventList from "./components/EventList";
 const BASE_URL = "https://api.getgalore-staging.com/v1/";
 const EVENTS_URL = `${BASE_URL}/events`;
 const API_KEY = "y7LfciquwtdT4gCQgnNMzQxx";
+const API_VERSION = "1.25";
 
 function App() {
   const [eventList, setEventList] = useState([]);
@@ -16,7 +17,8 @@ function App() {
   const getEvents = () => {
     fetch(EVENTS_URL, {
       headers: {
-        "Api-Key": API_KEY
+        "Api-Key": API_KEY,
+        "Api-Version": API_VERSION
       }
     })
       .then((response) => response.json())
