@@ -39,12 +39,19 @@ function EventItem({ event }) {
           </div>
 
           <div className="mt-auto flex items-baseline">
-            <button className="bg-indigo-500 hover:bg-indigo-600 transition-colors text-white px-2 py-1 rounded">
-              Reserve Your Spot
-            </button>
-            <span className="ml-2 text-sm text-yellow-600">
-              Only {event.available_spots} spots left!
-            </span>
+            {event.available_spots > 0 ? (
+              <button className="bg-indigo-500 hover:bg-indigo-600 transition-colors text-white px-2 py-1 rounded">
+                Reserve Your Spot
+              </button>
+            ) : (
+              <p className="text-yellow-600">Reservations Full</p>
+            )}
+
+            {event.available_spots > 0 && event.available_spots < 5 && (
+              <span className="ml-2 text-sm text-yellow-600">
+                Only {event.available_spots} spots left!
+              </span>
+            )}
           </div>
         </div>
       </article>
