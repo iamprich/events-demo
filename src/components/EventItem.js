@@ -14,14 +14,15 @@ function EventItem({ event }) {
             ></img>
           </figure>
         )}
+
         <div className="flex flex-col">
-          <header>
+          <header className="mb-2">
             <h1 className="text-xl">{event.title}</h1>
             <h2 className="text-gray-500">{event.provider.name}</h2>
           </header>
 
           {event.start_time_iso_string && event.end_time_iso_string && (
-            <div className="mt-2">
+            <div>
               <time className="block">
                 {formatDate(event.start_time_iso_string)}
               </time>
@@ -35,6 +36,7 @@ function EventItem({ event }) {
           )}
 
           <div className="mb-4">
+            <p>{event.attendance_string}</p>
             <p>{formatPrice(event.price_integer, event.currency)}</p>
           </div>
 
@@ -48,9 +50,9 @@ function EventItem({ event }) {
             )}
 
             {event.available_spots > 0 && event.available_spots < 5 && (
-              <span className="ml-2 text-sm text-yellow-600">
+              <p className="ml-2 text-sm text-yellow-600">
                 Only {event.available_spots} spots left!
-              </span>
+              </p>
             )}
           </div>
         </div>
