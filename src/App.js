@@ -3,7 +3,7 @@ import EventList from "./components/EventList";
 
 const BASE_URL = "https://api.getgalore-staging.com/v1/";
 const EVENTS_URL = `${BASE_URL}/events`;
-const API_KEY = "y7LfciquwtdT4gCQgnNMzQxx";
+const API_KEY = process.env.REACT_APP_API_KEY;
 const API_VERSION = "1.25";
 
 function App() {

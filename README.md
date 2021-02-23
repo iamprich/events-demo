@@ -24,6 +24,12 @@ Install the dependencies
 $ yarn install
 ```
 
+Create a `.env` file and set the `REACT_APP_API_KEY` variable
+
+```
+$ touch .env
+```
+
 Start the development server
 
 ```
